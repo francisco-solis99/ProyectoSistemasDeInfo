@@ -20,3 +20,81 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
 }
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--red);
+    padding: 10% 5%;
+    background-image: url(../login/images/bg-intro-mobile.png);
+}
+
+.login__copy{
+    /* background-color: springgreen; */
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.login__title-text{
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.login__pharagraph-text{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.form__container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form{
+    /* background-color: salmon; */
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: var(--darkBlue);
+    font-weight: 700;
+    padding: 20px;
+    border: 1px solid var(--graishBlue);
+    
+}
+
+.form__button{
+    background-color: var(--green);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 4px;
+    line-height: 50px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    box-shadow: 0px 6px 7px 0 #32b97f;
+}
+
+.login__terms{
+    font-size: 1.4rem;
+    color: var(--graishBlue);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.terms__services{
+    color: var(--red);
+    font-weight: 700;
+}
