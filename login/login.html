@@ -10,7 +10,47 @@
   <title>Login</title>
 </head>
 <body>
+  
+  <main class="hero">
+    <section class="login__copy">
+      <h2 class="login__title-text">
+        Crea un cliente, no una venta
+      </h2>
+      <p class="login__pharagraph-text">
+        Recuerrda brindar un buen servicio, cerrar una venta es importante, pero lograr lealtad de los clientes es vital.
+      </p>
+    </section>
 
+    <section class="login__logo">
+
+    </section>
+
+    <section class="login__form">
+      <div class="form__container">
+        <form action="" method="" class="form">
+
+          <label for="nombre" class="form__field">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" autocomplete="given-name" required class="form__input"/>
+          </label>
+
+          <label for="apellido" class="form__field">
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido(s)" autocomplete="family-name" required class="form__input"/>
+          </label>
+
+          <label for="correo" class="form__field">
+            <input type="email" id="correo" name="correo" placeholder="Dirección de correo" autocomplete="email" required class="form__input"/>
+          </label>
+
+          <label for="pass" class="form__field">
+            <input type="password" id="pass" name="pass" placeholder="Contraseña" required class="form__input"/>
+          </label>
+
+          <input type="submit" value="Brindar servicio" class="form__button"/>
+        </form>
+        <p class="login__terms"> Haciendo click en el boton, estas de acuerdo con nuestros <span class="terms__services">terminos y servicios</span></p>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
