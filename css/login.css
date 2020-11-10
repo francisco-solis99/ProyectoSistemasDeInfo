@@ -28,6 +28,18 @@ body{
     background-color: var(--red);
     padding: 10% 5%;
     background-image: url(../login/images/bg-intro-mobile.png);
+    
+}
+
+@keyframes toBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+    }
 }
 
 /* Styles principal copy text */
@@ -36,6 +48,7 @@ body{
     margin-top: 40px;
     text-align: center;
     color: white;
+    animation: toBottom 700ms ease-in-out;
 }
 
 .login__title-text{
@@ -57,6 +70,7 @@ body{
     /* background-color: seagreen; */
     position: relative;
     margin-bottom: 20px;
+    animation: toBottom 700ms ease-in-out;
 }
 
 .logo__text{
@@ -132,6 +146,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 10px 2px 0 rgba(0, 0, 0, 0.2);
+    animation: toBottom 700ms ease-in-out;
 }
 
 .form{
@@ -162,7 +177,11 @@ body{
     font-weight: 600;
     margin-bottom: 15px;
     box-shadow: 0px 6px 7px 0 #32b97f;
+    cursor: pointer;
+    letter-spacing: 2px;
 }
+
+
 
 .login__terms{
     font-size: 1.4rem;
@@ -194,6 +213,6 @@ body{
     }
 
     .login__logo{
-        margin-bottom: 10px;
+        margin-bottom: -10px;
     }
 }
