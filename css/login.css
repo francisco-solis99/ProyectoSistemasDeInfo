@@ -64,6 +64,7 @@ body{
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .logo__bandita{
@@ -174,4 +175,25 @@ body{
 .terms__services{
     color: var(--red);
     font-weight: 700;
+}
+
+/* Media query */
+@media screen and (min-width: 1024px){
+    .hero{
+        background-image: url(../login/images/bg-intro-desktop.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+    
+    /* Styles principal copy text */
+    .login__copy{
+        margin: 0;
+        margin-right: 40px;
+    }
+
+    .login__logo{
+        margin-bottom: 10px;
+    }
 }
