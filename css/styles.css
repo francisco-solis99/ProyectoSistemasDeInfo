@@ -189,3 +189,124 @@ body{
       transform: translate(0, 43.3333333333px) rotate(-45deg);
     }
   }
+
+  /* Styles to users image */
+
+  .features{
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      /* background-color: lightsalmon; */
+  }
+
+
+  .user__image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #7A5A99;
+    border: 2px solid #eee;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.user__person1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    width: 150px;
+    margin: auto;
+    background-color: lightcoral;
+    /* animation: nine 5s linear infinite */
+}
+
+.user__head{
+    background-color: #ecddcb;
+    height: 65px;
+    width: 55px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-radius: 50% / 60%;
+    margin: auto;
+}
+
+.user__ear{
+    background-color: #ddcebc;
+    border-radius: 100%;
+    position: absolute;
+    height: 15px;
+    width: 7px;
+    top: 26px;
+} 
+
+.user__ear-left{
+    left: -5px;
+}
+
+.user__ear-right{
+    right: -5px;
+}
+
+.user__neck{
+    content: '';
+    height: 15px;
+    width: 20px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background-color: #ecddcb;
+}
+
+.user__hair{
+    width: 55px;
+    height: 60px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -5px;
+    border-top: 10px solid #363f29;
+    border-radius: 100%;
+    /* background-color: lightsalmon; */
+}
+
+
+.user__hair-side{
+    height: 22px;
+    width: 6px;
+    top: 6px;
+    position: absolute;
+    background-color: #362f29;
+}
+
+.user__hair-left{
+    border-radius: 100% 0 40% 40%;
+    left: 0;
+    transform: rotate(10deg);
+}
+
+.user__hair-right{
+    border-radius: 0 100% 40% 40%;
+    right: 0;
+    transform: rotate(-10deg);
+}
+
+.user__hair:after{
+    border-top: 12px solid #362f29;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 0% 0% 100% 100%;
+    content: '';
+    height: 0px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 5px;
+}
