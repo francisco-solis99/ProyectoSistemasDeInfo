@@ -18,14 +18,13 @@ html{
 body{
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
-    background-color: hsl(154, 59%, 51%);
-
 }
 
 .container{
     padding: 5%;
-    /* background-color: limegreen; */
+    background-color: hsl(154, 59%, 51%);
     background-image: url(../images/bg-mobile.svg);
+    /* background-blend-mode: difference; */
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,7 +34,7 @@ body{
 
 .hero{
     /* background-color: salmon; */
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,11 +130,12 @@ body{
 }
 
 .button__join{
-    font-size: 1.8rem;
-    padding: 15px;
-    line-height: 40px;
+    font-size: 1.6rem;
+    padding: 12px;
+    line-height: 20px;
     border: none;
     border-radius: 6px;
+    margin: 0 10px;
 }
 
 .hero__arrows{
