@@ -190,7 +190,7 @@ body{
     }
   }
 
-  /* Styles to users image */
+  /* Styles to user image css */
 
   .features{
       margin-top: 30px;
@@ -260,6 +260,8 @@ body{
     right: 0;
     left: 0;
     background-color: #ecddcb;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
 }
 
 .user__hair{
@@ -309,4 +311,28 @@ body{
     right: 0;
     top: -2px;
     width: 5px;
+}
+
+.user__clothes{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin: auto;
+    background-color: #272727;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+.clothes__center{
+    height: 50px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #5C3770;
 }
