@@ -200,7 +200,8 @@ body{
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: rgba(105, 182, 148, 0.7);
+      background-color: #49274A;
+      /* background-color: rgba(252, 95, 68,0.9); */
       border-radius: 8px;
       padding-top: 1.5em;
       margin: 30px 20px;
@@ -500,5 +501,5 @@ body{
   .features__paragraph{
       font-size: 1.4rem;
       color: var(--darkBlue);
-      font-weight: 500;
+      /* color: #7B7382; */
   }
