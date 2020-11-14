@@ -25,7 +25,8 @@ body{
     background-color: hsl(154, 59%, 51%);
     background-image: url(../images/bg-mobile.svg);
     /* background-blend-mode: difference; */
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
