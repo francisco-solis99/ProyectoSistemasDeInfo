@@ -1,4 +1,6 @@
 :root{
+    --darkBlue: hsl(249, 10%, 26%);
+    --graishBlue: hsl(246, 25%, 77%);
     --logoGray: #454d55;
     --logoSemiWhite: #e2eaf9;
     --logoYellowOrange: #fccc48;
@@ -191,13 +193,17 @@ body{
     }
   }
 
-  /* Styles to user image css */
+  /* Styles to user features css */
 
   .features{
-      margin-top: 30px;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      /* background-color: lightsalmon; */
+      background-color: rgba(105, 182, 148, 0.7);
+      border-radius: 8px;
+      padding-top: 1.5em;
+      margin: 30px 20px;
   }
 
 
@@ -476,4 +482,23 @@ body{
     95% {
       opacity: 1;
     }
+  }
+
+
+  /* Text about the features of teh service */
+  .features__text{
+      text-align: center;
+      background-color: white;
+      margin-top: 4px;
+      border-radius: 8px;
+      position: relative;
+      width: 110%;
+      padding: 10px;
+  }
+
+
+  .features__paragraph{
+      font-size: 1.4rem;
+      color: var(--darkBlue);
+      font-weight: 500;
   }
