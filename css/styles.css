@@ -208,7 +208,7 @@ body{
     border: 2px solid #eee;
     border-radius: 100%;
     overflow: hidden;
-    animation: bg-doctor 5s linear;
+    animation: bg-employe 5s linear infinite;
 }
 
 .user__person1, .user__person2{
@@ -220,7 +220,7 @@ body{
     width: 150px;
     margin: auto;
     /* background-color: lightcoral; */
-    /* animation: nine 5s linear infinite */
+    
 }
 
 .user__person1{
@@ -426,7 +426,7 @@ body{
     left: 2px;
 }
 
-@keyframes bg-doctor {
+@keyframes bg-employe{
     0% {
       background-color: #7A5A99;
     }
