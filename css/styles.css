@@ -141,7 +141,7 @@ body{
 }
 
 .button__join{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding: 15px;
     line-height: 20px;
     border: none;
@@ -222,7 +222,7 @@ body{
       /* background-color: rgba(252, 95, 68,0.9); */
       border-radius: 8px;
       padding-top: 1.5em;
-      margin: 30px 20px;
+      margin: 30px 10%;
       box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.35);
       
   }
@@ -527,4 +527,113 @@ body{
 
   .features__name{
       font-weight: 600;
+  }
+
+  @media screen and (min-width: 948px){
+    .hero__text{
+        font-size: 2.5rem;
+    }
+    
+    .features{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        margin: 30px 15%;
+        box-shadow: 8px 8px 4px 3px rgba(0, 0, 0, 0.35);
+    }
+
+    .user__image {
+        position: relative;
+        width: 380px;
+        height: 200px;
+        box-shadow: 0px 10px 8px 4px rgba(0, 0, 0, 0.65);
+    }
+
+    .features__text{
+        text-align: center;
+        margin: 0;
+        margin-left: 10%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .features__paragraph{
+        font-size: 1.6rem;
+    }
+
+    .user__person1, .user__person2{
+        height: 160px;
+        width: 100%;
+    }
+    
+    .user__head{
+        height: 95px;
+        width: 80px;
+    }
+    
+    .user__ear{
+        height: 20px;
+        width: 12px;
+    } 
+    
+    .user__neck{
+        height: 45px;
+        width: 30px;
+    }
+    
+    .user__hair{
+        width: 75px;
+        height: 80px;
+    }
+    
+    
+    .user__hair-side{
+        height: 28px;
+        width: 12px;
+    }
+    
+    .user__hair:after{
+        border-top: 12px solid #362f29;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-radius: 0% 0% 100% 100%;
+        content: '';
+        height: 0px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: -2px;
+        width: 10px;
+    }
+    
+    .user__clothes{
+        height: 70px;
+        width: 130px;
+    }
+    
+    .clothes__center{
+        height: 70px;
+        width: 40px;
+    }
+
+    /* User 2 */
+
+    .user2__hair{
+        width: 75px;
+        height: 90px;
+        left: 5px;
+        top: -7px;
+    }
+    
+    .user2__hair-side{
+        height: 30px;
+        width: 8px;
+    }
+
+    .features__text{
+        box-shadow: 0px 9px 8px 2px rgba(0, 0, 0, 0.65);
+    }
+
   }
