@@ -205,6 +205,8 @@ body{
       border-radius: 8px;
       padding-top: 1.5em;
       margin: 30px 20px;
+      box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.35);
+      
   }
 
 
@@ -217,6 +219,7 @@ body{
     border-radius: 100%;
     overflow: hidden;
     animation: bg-employe 5s linear infinite;
+    box-shadow: 10px 2px 5px 2px rgba(0, 0, 0, 0.65);
 }
 
 .user__person1, .user__person2{
