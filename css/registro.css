@@ -79,6 +79,7 @@ body{
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+    color: var(--darkBlue);
 }
 
 .logo__bandita{
