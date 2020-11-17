@@ -156,4 +156,16 @@ body{
       color: white;
   }
 
-  
+@media screen and (min-width: 1024px){
+    .session__form-container{
+        width: 50%;
+    }
+
+    .hero{
+        background: linear-gradient(-120deg, rgba(219,170,199,1) 0%, rgba(255,122,122,1) 30%, rgba(101,70,140,1) 70%, rgba(124,76,185,1) 100%), url(../login/images/bg-intro-desktop.png);
+    }
+
+    .logo__bandita{
+        width:20%;
+    }
+}
