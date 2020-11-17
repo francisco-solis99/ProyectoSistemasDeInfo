@@ -1,0 +1,257 @@
+:root{
+    --logoGray: #454d55;
+    --logoSemiWhite: #e2eaf9;
+    --logoYellowOrange: #fccc48;
+    --logoOrange:  #fc9351;
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --graishBlue: hsl(246, 25%, 77%);
+    --grayInputs: #C4C8DB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--red); */
+    background: linear-gradient(-120deg, rgba(219,170,199,1) 0%, rgba(255,122,122,1) 30%, rgba(101,70,140,1) 70%, rgba(124,76,185,1) 100%), url(../login/images/bg-intro-mobile.png);
+    background-size: cover;
+    background-blend-mode: difference;
+}
+
+.session__form-container{
+    width: 80%;
+    background-color: white;
+    padding: 10%;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 2px rgba(0, 0, 0, 0.75);
+    animation: toBottom 700ms ease-in-out;
+}
+
+.session__form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Logo */
+.session__logo{
+    /* background-color: seagreen; */
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.logo__text{
+    display: flex;
+    text-decoration: none;
+    /* color: rgba(54, 54, 54,0.9); */
+    color: #ffffff;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.logo__bandita{
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width:35%; */
+}
+
+.logo__rest-text{
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    color: var(--logoGray);
+}
+
+
+.bandita__x{
+    border-radius: 12px;
+    width: 100px;
+    height: 30px;
+    border: 5px solid var(--logoGray);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, var(--logoSemiWhite)), color-stop(25%, #ffffff));
+    background: linear-gradient(var(--logoSemiWhite) 25%, #ffffff 25%);
+}
+
+.bandita__x-back{
+    transform: rotate(45deg);
+}
+
+.bandita__x-front{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.bandita__parche{
+    border-radius: 4px;
+    width: 30px;
+    height: 15px;
+    background-color: var(--logoYellowOrange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.bandita__dot{
+    width: 3px;
+    height: 3px;
+    margin: 1px 2px;
+    background-color: var(--logoOrange);
+    border-radius: 50%;
+    display: inline-block;   
+}
+
+.form__field{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.session__icon{
+    width: 28px;
+    height: 28px;
+    border-bottom: 1px solid var(--grayInputs);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.session__input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grayInputs);
+    color: #767676;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding-left: 10px;
+    /* outline: none; */
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grayInputs);
+    opacity: 1; /* Firefox */
+  }
+
+  .session__button{
+      margin-top: 10px;
+      font-size: 2rem;
+      padding: 20px;
+      line-height: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #DF2359;
+      color: white;
+      cursor: pointer;
+  }
+
+  .session__button:hover{
+    background-color: #db3e6a;
+  }
+
+  .session__media{
+      margin-top: 30px;
+      /* background-color: lightcoral; */
+      width: 100%;
+  }
+
+  .media__list{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .media__image{
+      width: 32px;
+      height: 32px;
+  }
+
+  .media__link{
+      cursor: pointer;
+  }
+
+  /* .media__list .media__link:first-child {
+      margin-right: 1em;
+  }
+
+  .media__list .media__link:last-child{
+      margin-left: 1em;
+  } */
+
+
+
+@keyframes toBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    .session__form-container{
+        width: 50%;
+        padding: 8%;
+    }
+
+    .hero{
+        background:  linear-gradient(-120deg, rgba(219,170,199,1) 0%, rgba(255,122,122,1) 30%, rgba(66,222,153,1) 70%, rgba(56,204,140,1) 100%),  url(../login/images/bg-intro-desktop.png);
+    }
+
+    .logo__bandita{
+        width:20%;
+    }
+
+    .session__media{
+        
+        /* background-color: lightcoral; */
+        position: absolute;
+        bottom: -58%;
+    }
+
+    .media__image{
+        width: 38px;
+        height: 38px;
+    }
+
+    .media__image--mail{
+        width: 32px;
+        height: 32px;
+    }
+}
