@@ -43,6 +43,7 @@ body{
     width: 80%;
     background-color: white;
     padding: 10%;
+    padding-bottom: 5%;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -53,6 +54,7 @@ body{
 .session__form{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 /* Logo */
@@ -133,8 +135,6 @@ body{
 
 .form__field{
     display: flex;
-    /* align-items: center; */
-    /* background-color: khaki; */
     margin-bottom: 30px;
 }
 
@@ -180,6 +180,36 @@ body{
     background-color: #db3e6a;
   }
 
+  .session__media{
+      margin-top: 30px;
+      /* background-color: lightcoral; */
+      width: 100%;
+  }
+
+  .media__list{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .media__image{
+      width: 32px;
+      height: 32px;
+  }
+
+  .media__link{
+      cursor: pointer;
+  }
+
+  /* .media__list .media__link:first-child {
+      margin-right: 1em;
+  }
+
+  .media__list .media__link:last-child{
+      margin-left: 1em;
+  } */
+
 
 
 @keyframes toBottom{
@@ -197,6 +227,7 @@ body{
 @media screen and (min-width: 1024px){
     .session__form-container{
         width: 50%;
+        padding: 8%;
     }
 
     .hero{
@@ -205,5 +236,22 @@ body{
 
     .logo__bandita{
         width:20%;
+    }
+
+    .session__media{
+        
+        /* background-color: lightcoral; */
+        position: absolute;
+        bottom: -58%;
+    }
+
+    .media__image{
+        width: 38px;
+        height: 38px;
+    }
+
+    .media__image--mail{
+        width: 32px;
+        height: 32px;
     }
 }
