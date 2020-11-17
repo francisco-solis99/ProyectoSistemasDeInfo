@@ -46,3 +46,78 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+/* Logo */
+.session__logo{
+    background-color: seagreen;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.logo__text{
+    display: flex;
+    text-decoration: none;
+    /* color: rgba(54, 54, 54,0.9); */
+    color: #ffffff;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.logo__bandita{
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 32%;
+}
+
+.logo__rest-text{
+    font-size: 4.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+
+.bandita__x{
+    border-radius: 15px;
+    width: 130px;
+    height: 40px;
+    border: 5px solid var(--logoGray);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, var(--logoSemiWhite)), color-stop(25%, #ffffff));
+    background: linear-gradient(var(--logoSemiWhite) 25%, #ffffff 25%);
+}
+
+.bandita__x-back{
+    transform: rotate(45deg);
+}
+
+.bandita__x-front{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.bandita__parche{
+    border-radius: 5px;
+    width: 38px;
+    height: 23px;
+    background-color: var(--logoYellowOrange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.bandita__dot{
+    width: 5px;
+    height: 5px;
+    margin: 1px 2px;
+    background-color: var(--logoOrange);
+    border-radius: 50%;
+    display: inline-block;   
+}
