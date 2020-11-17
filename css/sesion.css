@@ -34,7 +34,7 @@ body{
     justify-content: center;
     align-items: center;
     /* background-color: var(--red); */
-    background: linear-gradient(-120deg, rgba(219,170,199,1) 0%, rgba(255,122,122,1) 30%, rgba(101,70,140,1) 70%, rgba(124,76,185,1) 100%), url(../login/images/bg-intro-mobile.png);
+    background: linear-gradient(-120deg, rgba(219,170,199,1) 0%, rgba(255,122,122,1) 30%, rgba(66,222,153,1) 70%, rgba(56,204,140,1) 100%), url(../login/images/bg-intro-mobile.png);
     background-size: cover;
     background-blend-mode: difference;
 }
