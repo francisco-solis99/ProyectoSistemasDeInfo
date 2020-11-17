@@ -8,6 +8,7 @@
     --blue: hsl(248, 32%, 49%);
     --darkBlue: hsl(249, 10%, 26%);
     --graishBlue: hsl(246, 25%, 77%);
+    --grayInputs: #C4C8DB;
 }
 
 *{
@@ -32,14 +33,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--red); */
+    background: linear-gradient(-120deg, rgba(219,170,199,1) 0%, rgba(255,122,122,1) 30%, rgba(101,70,140,1) 70%, rgba(124,76,185,1) 100%), url(../login/images/bg-intro-mobile.png);
+    background-size: cover;
+    background-blend-mode: difference;
 }
 
 .session__form-container{
     width: 80%;
-    background-color: lightcoral;
+    background-color: white;
     padding: 10%;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 2px rgba(0, 0, 0, 0.75);
 }
 
 .session__form{
@@ -51,7 +58,7 @@ body{
 .session__logo{
     /* background-color: seagreen; */
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 3em;
 }
 
 .logo__text{
@@ -69,12 +76,13 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40%;
+    width:35%;
 }
 
 .logo__rest-text{
     font-size: 4rem;
     font-family: 'Lobster', cursive;
+    color: var(--logoGray);
 }
 
 
@@ -121,3 +129,31 @@ body{
     border-radius: 50%;
     display: inline-block;   
 }
+
+.session__input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grayInputs);
+    color: #767676;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grayInputs);
+    opacity: 1; /* Firefox */
+  }
+
+  .session__button{
+      margin-top: 10px;
+      font-size: 2rem;
+      padding: 20px;
+      line-height: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #DF2359;
+      color: white;
+  }
+
+  
