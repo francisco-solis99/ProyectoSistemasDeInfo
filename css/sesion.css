@@ -29,4 +29,20 @@ body{
     width: 100%;
     min-height: 100vh;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session__form-container{
+    width: 50%;
+    background-color: lightcoral;
+    padding: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.session__form{
+    display: flex;
+    flex-direction: column;
 }
