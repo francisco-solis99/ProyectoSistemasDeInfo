@@ -9,6 +9,7 @@
     --darkBlue: hsl(249, 10%, 26%);
     --graishBlue: hsl(246, 25%, 77%);
     --grayInputs: #C4C8DB;
+    --background: #F9FBFB;
 }
 
 *{
@@ -24,4 +25,98 @@ html{
 body{
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+}
+
+/* Styles to header */
+
+
+.header{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+}
+
+.burger__icon{
+    color: var(--darkBlue);
+}
+
+.burger__container{
+    flex-grow: 0;
+    margin-right: 20px;
+}
+
+.search__bar-container{
+    flex-grow: 1;
+    position: relative;
+}
+
+.search__icon{
+    position: absolute;
+    top: 32%;
+    left: 2%;
+    color: var(--graishBlue);
+}
+
+.search__input{
+    font-size: 1.4rem;
+    background-color: transparent;
+    width: 98%;
+    line-height: inherit;
+    padding: 10px;
+    padding-left: 2em;
+    border: none;
+}
+
+::placeholder{
+    color: var(--graishBlue);
+}
+
+/* Styles to products */
+.products{
+    /* background-color: lightcoral; */
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 5%;
+    gap: 30px;
+}
+
+.product__card{
+    background-color: white;
+}
+
+.card__image-container{
+    width: 100%;
+}
+
+.card__image{
+    width: 100%;
+}
+
+.details__name{
+    font-size: 1.6rem;
+    color: var(--darkBlue);
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.details__price{
+    font-size: 1.6rem;
+    color: var(--darkBlue);
+    font-weight: 700;
+}
+
+.details__product{
+    font-size: 1.2rem;
+    color: var(--logoGray);
+    font-weight: 400;
 }
