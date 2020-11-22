@@ -1,0 +1,27 @@
+:root{
+    --logoGray: #454d55;
+    --logoSemiWhite: #e2eaf9;
+    --logoYellowOrange: #fccc48;
+    --logoOrange:  #fc9351;
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --graishBlue: hsl(246, 25%, 77%);
+    --grayInputs: #C4C8DB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
