@@ -167,7 +167,7 @@ body{
 
 .product__card{
     background-color: white;
-    padding: 15px;
+    padding: 10px;
 }
 
 .card__image-container{
@@ -193,10 +193,99 @@ body{
 }
 
 .details__product{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--logoGray);
     font-weight: 400;
 }
+
+/* Styles to check button */
+
+.card__controls{
+    margin-top: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__check{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: var(--grayInputs);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in;
+}
+
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 1rem;
+    color: white;
+    display: none;
+}
+
+input[type="checkbox"]:hover{
+    background-color: #a5a5a5;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--green);
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--green);
+}
+
+input[type="checkbox"]:checked::after{
+    display: initial;
+}
+
+
+.check__text{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--darkBlue);
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+/* Styles to quantity input */
+.card__quantity{
+    display: none;
+    /* background-color: lightcoral; */
+}
+
+.quantity__active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity__text{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 4px;
+    color: var(--darkBlue);
+}
+
+.quantity__input{
+    width: 25px;
+    font-size: 1.2rem;
+    color: var(--darkBlue);
+}
+
+
 
 /* Button on bottom */
 .product__buy{
