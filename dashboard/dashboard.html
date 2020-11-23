@@ -11,103 +11,104 @@
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-    <header class="header">
-        <picture class="burger__container">
-            <svg class="burger__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
-                <g fill="none" fill-rule="nonzero">
-                    <path d="m2 16h28"></path>
-                    <path d="m2 24h28"></path>
-                    <path d="m2 8h28"></path>
-                </g>
-            </svg>
-        </picture>
-        <div class="search__bar-container">
-            <label for="search" class="search__label">
-                <svg class="search__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:4;overflow:visible" aria-hidden="true" role="presentation" focusable="false">
-                    <g fill="none">
-                        <path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
+    <div class="wrapper">
+        <header class="header">
+            <picture class="burger__container">
+                <svg class="burger__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                    <g fill="none" fill-rule="nonzero">
+                        <path d="m2 16h28"></path>
+                        <path d="m2 24h28"></path>
+                        <path d="m2 8h28"></path>
                     </g>
                 </svg>
-                <input type="text" name="search" placeholder="Search" class="search__input">
-            </label>
-        </div>
-        <div class="hero__logo">
-            <h1 class="logo__text">
-              <div class="logo__bandita">
-                <div class="bandita__x bandita__x-back"></div>
-                <div class="bandita__x bandita__x-front">
-                  <div class="bandita__parche">
-                    <span class="bandita__dot"></span>
-                    <span class="bandita__dot"></span>
-                    <span class="bandita__dot"></span>
-                    <span class="bandita__dot"></span>
+            </picture>
+            <div class="search__bar-container">
+                <label for="search" class="search__label">
+                    <svg class="search__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:4;overflow:visible" aria-hidden="true" role="presentation" focusable="false">
+                        <g fill="none">
+                            <path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
+                        </g>
+                    </svg>
+                    <input type="text" name="search" placeholder="Search" class="search__input">
+                </label>
+            </div>
+            <div class="hero__logo">
+                <h1 class="logo__text">
+                  <div class="logo__bandita">
+                    <div class="bandita__x bandita__x-back"></div>
+                    <div class="bandita__x bandita__x-front">
+                      <div class="bandita__parche">
+                        <span class="bandita__dot"></span>
+                        <span class="bandita__dot"></span>
+                        <span class="bandita__dot"></span>
+                        <span class="bandita__dot"></span>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <span class="logo__rest-text">enial</span>
+                </h1>
               </div>
-              <span class="logo__rest-text">enial</span>
-            </h1>
-          </div>
-    </header>
-
-    <main class="products">
-        <article class="product__card">
-            <picture class="card__image-container">
-                <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
-            </picture>
-            <div class="card__details">
-                <h4 class="details__name">Aspirina</h4>
-                <span class="details__price">$399</span>
-                <p class="details__product">
-                    Caja de aspirinas de 8 pastillas
-                </p>
-            </div>
-        </article>
-
-        <article class="product__card">
-            <picture class="card__image-container">
-                <img src="" alt="" class="card__image">
-            </picture>
-            <div class="card__details">
-                <h4 class="details__name">Aspirina</h4>
-                <span class="details__price">$399</span>
-                <p class="details__product">
-                    Caja de aspirinas de 8 pastillas
-                </p>
-            </div>
-        </article>
-
-        <article class="product__card">
-            <picture class="card__image-container">
-                <img src="" alt="" class="card__image">
-            </picture>
-            <div class="card__details">
-                <h4 class="details__name">Aspirina</h4>
-                <span class="details__price">$399</span>
-                <p class="details__product">
-                    Caja de aspirinas de 8 pastillas
-                </p>
-            </div>
-        </article>
-
-        <article class="product__card">
-            <picture class="card__image-container">
-                <img src="" alt="" class="card__image">
-            </picture>
-            <div class="card__details">
-                <h4 class="details__name">Aspirina</h4>
-                <span class="details__price">$399</span>
-                <p class="details__product">
-                    Caja de aspirinas de 8 pastillas
-                </p>
-            </div>
-        </article>
-    </main>
-
-    <secttion class="product__buy">
-        <button class="button__buy">
-            Comprar
-        </button>
-    </secttion>
+        </header>
     
+        <main class="products">
+            <article class="product__card">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <div class="card__details">
+                    <h4 class="details__name">Aspirina</h4>
+                    <span class="details__price">$399</span>
+                    <p class="details__product">
+                        Caja de aspirinas de 8 pastillas
+                    </p>
+                </div>
+            </article>
+    
+            <article class="product__card">
+                <picture class="card__image-container">
+                    <img src="" alt="" class="card__image">
+                </picture>
+                <div class="card__details">
+                    <h4 class="details__name">Aspirina</h4>
+                    <span class="details__price">$399</span>
+                    <p class="details__product">
+                        Caja de aspirinas de 8 pastillas
+                    </p>
+                </div>
+            </article>
+    
+            <article class="product__card">
+                <picture class="card__image-container">
+                    <img src="" alt="" class="card__image">
+                </picture>
+                <div class="card__details">
+                    <h4 class="details__name">Aspirina</h4>
+                    <span class="details__price">$399</span>
+                    <p class="details__product">
+                        Caja de aspirinas de 8 pastillas
+                    </p>
+                </div>
+            </article>
+    
+            <article class="product__card">
+                <picture class="card__image-container">
+                    <img src="" alt="" class="card__image">
+                </picture>
+                <div class="card__details">
+                    <h4 class="details__name">Aspirina</h4>
+                    <span class="details__price">$399</span>
+                    <p class="details__product">
+                        Caja de aspirinas de 8 pastillas
+                    </p>
+                </div>
+            </article>
+        </main>
+    
+        <section class="product__buy">
+            <button class="button__buy">
+                Finalizar compra
+            </button>
+        </section>
+    </div>
 </body>
 </html>

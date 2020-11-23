@@ -28,6 +28,10 @@ body{
     background-color: var(--background);
 }
 
+.wrapper{
+    position: relative;
+}
+
 /* Styles to header */
 
 
@@ -45,6 +49,7 @@ body{
 
 .burger__icon{
     color: var(--darkBlue);
+    cursor: pointer;
 }
 
 .burger__container{
@@ -191,4 +196,35 @@ body{
     font-size: 1.2rem;
     color: var(--logoGray);
     font-weight: 400;
+}
+
+/* Button on bottom */
+.product__buy{
+    background-color: white;
+    width: 100%;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+}   
+
+.button__buy{
+    background-color: var(--green);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 500ms ease-in;
+}
+
+.button__buy:hover{
+    background-color: transparent;
+    border: 1px var(--green) solid;
+    color: var(--darkBlue);
 }
