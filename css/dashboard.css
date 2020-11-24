@@ -321,23 +321,103 @@ input[type="checkbox"]:checked::after{
     color: var(--darkBlue);
 }
 
-
+/* Styles to menu */
 .menu{
     background-color: var(--green);
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 60%;
+    right: 50%;
     /* FIXME: Checar z-index */
     z-index: 2;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    padding-top: 3em;
+}
+
+.menu__close-icon-container{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+    /* background-color: lightcoral; */
+}
+
+.menu__close-icon{
+    width: 30px;
+    height: 5px;
+    background-color: transparent;
+    align-self: flex-end;
+    transform: translate(-50%, -50%);
+}
+
+
+.menu__close-icon::before, .menu__close-icon::after {
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-color: white;
+    position: absolute;
+
+}
+
+.menu__close-icon::before{
+    transform: rotate( -45deg);
+}
+
+.menu__close-icon::after{
+    transform: rotate( 45deg);
+}
+
+
+.menu__list{
+    list-style-type: none;
+    margin-top: 2em;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.menu__image-container{
+    width: 100%;
+    height: 100%;
 }
 
 .menu__image{
-    font-family: "Font Awesome 5 Free";
-    content: "\f007";
-    color: black;
+    width: inherit;
+}
+
+
+.menu__item:first-child{
+    width: 50%;
+    margin: 0;
+    background-color: transparent;
+}
+
+.menu__item{
+    display: flex;
+    margin: -3px 0;
+}
+
+.item__text{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.menu__item:last-child{
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+
+.menu__item:last-child:hover{
+    text-decoration: underline;
 }
