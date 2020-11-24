@@ -531,6 +531,11 @@ body{
   }
 
   @media screen and (min-width: 948px){
+    
+    .container{
+        background-image: url(../images/bg-mobile.svg);
+    }
+    
     .hero__text{
         font-size: 2.5rem;
     }
