@@ -26,6 +26,7 @@ body{
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
     background-color: var(--background);
+
 }
 
 .wrapper{
@@ -130,7 +131,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-  
 }
 
 .bandita__parche{
@@ -163,6 +163,8 @@ body{
     grid-template-columns: repeat(2,1fr);
     padding: 5%;
     gap: 30px;
+    position: relative;
+    z-index: -3;
 }
 
 .product__card{
@@ -293,6 +295,7 @@ input[type="checkbox"]:checked::after{
     width: 100%;
     line-height: 40px;
     position: fixed;
+    z-index: -2;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -316,4 +319,25 @@ input[type="checkbox"]:checked::after{
     background-color: transparent;
     border: 1px var(--green) solid;
     color: var(--darkBlue);
+}
+
+
+.menu{
+    background-color: var(--green);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 60%;
+    /* FIXME: Checar z-index */
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu__image{
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    color: black;
 }
