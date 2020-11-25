@@ -164,7 +164,7 @@ body{
     padding: 5%;
     gap: 30px;
     position: relative;
-    z-index: -3;
+    /* z-index: -3; */
 }
 
 .product__card{
@@ -295,7 +295,7 @@ input[type="checkbox"]:checked::after{
     width: 100%;
     line-height: 40px;
     position: fixed;
-    z-index: -2;
+    /* z-index: -2; */
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -334,11 +334,14 @@ input[type="checkbox"]:checked::after{
     left: 0;
     right: 50%;
     /* FIXME: Checar z-index */
-    z-index: 2;
+    padding-top: 3em;
+    display: none;
+}
+
+.menu.is-active{
     display: flex;
     flex-direction: column;
-    padding-top: 3em;
-    /* display: none; */
+    z-index: 99;
 }
 
 .menu__close-icon-container{
@@ -421,4 +424,20 @@ input[type="checkbox"]:checked::after{
 
 .menu__item:last-child:hover{
     text-decoration: underline;
+}
+
+.overlay{
+    display: none;
+    transition: all ease-in 300ms;
+}
+
+.overlay.is-active{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
 }
