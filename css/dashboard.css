@@ -26,11 +26,12 @@ body{
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
     background-color: var(--background);
-
+    /* position: relative; */
 }
 
 .wrapper{
     position: relative;
+    /* background-color: lightcoral; */
 }
 
 /* Styles to header */
@@ -46,7 +47,14 @@ body{
     padding: 0 10px;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
+
+.header.is-desactive{
+    z-index: initial;
+}
+
+
 
 .burger__icon{
     color: var(--darkBlue);
@@ -151,6 +159,7 @@ body{
     margin: 0.5px;
     background-color: var(--logoOrange);
     display: inline-block;   
+    
 }
 
 
@@ -158,14 +167,18 @@ body{
 .products{
     /* background-color: lightcoral; */
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: 5%;
-    gap: 30px;
+    gap: 25px;
     position: relative;
-    /* z-index: -3; */
+    z-index: 0;
 }
+
+.products.is-back{
+    z-index: -3;
+}   
 
 .product__card{
     background-color: white;
@@ -289,7 +302,7 @@ input[type="checkbox"]:checked::after{
 
 
 
-/* Button on bottom */
+/* bar on bottom */
 .product__buy{
     background-color: white;
     width: 100%;
@@ -301,12 +314,16 @@ input[type="checkbox"]:checked::after{
     justify-content: center;
     box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.75);
     padding: 8px;
-}   
+} 
+
+.product__buy.is-desactive{
+    display: none;
+}
 
 .button__buy{
     background-color: var(--green);
     border: none;
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     color: white;
     font-size: 1.6rem;
@@ -331,32 +348,38 @@ input[type="checkbox"]:checked::after{
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -100vw;
     right: 50%;
-    /* FIXME: Checar z-index */
     padding-top: 3em;
     display: none;
+    transition: all ease-in-out 500ms;
 }
 
 .menu.is-active{
     display: flex;
     flex-direction: column;
+    left: 0;
+    transition: all ease-in-out 500ms;
     z-index: 99;
 }
 
-.menu__close-icon-container{
+/* .menu__close-icon-container{
     display: flex;
     justify-content: flex-end;
     padding-right: 1em;
-    /* background-color: lightcoral; */
-}
+    
+} */
 
 .menu__close-icon{
     width: 30px;
-    height: 5px;
+    height: 25px;
     background-color: transparent;
     align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 
@@ -364,10 +387,9 @@ input[type="checkbox"]:checked::after{
     content: "";
     display: block;
     width: inherit;
-    height: inherit;
+    height: 5px;
     background-color: white;
     position: absolute;
-
 }
 
 .menu__close-icon::before{
@@ -433,11 +455,13 @@ input[type="checkbox"]:checked::after{
 
 .overlay.is-active{
     content: "";
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     display: block;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
-    bottom: 0;
     left: 50%;
-    right: 0;
+    width: 50vw;
+    height: 100vh;
+    transition: all ease-in 300ms;
 }

@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="header">
             <picture class="burger__container">
                 <svg class="burger__icon" id="burgerControl" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
                     <g fill="none" fill-rule="nonzero">
@@ -24,8 +24,8 @@
                     </g>
                 </svg>
             </picture>
-            <nav class="menu">
-                <div class="menu__close-icon"></div>
+            <nav class="menu" id="menu">
+                <div class="menu__close-icon" id="closeControl"></div>
                 <ul class="menu__list">
                     <li class="menu__item">
                         <picture class="menu__image-container">
@@ -43,7 +43,7 @@
                         </span>
                     </li>
                     <li class="menu__item">
-                        <span class="item__text">
+                        <span href="../index.html" class="item__text">
                             Cerrar sesion
                         </span>
                     </li>
@@ -79,7 +79,7 @@
 
        
     
-        <main class="products">
+        <main class="products" id="products">
             <article class="product__card">
                 <picture class="card__image-container">
                     <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
@@ -104,6 +104,30 @@
                 </div>
             </article>
     
+            <article class="product__card">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <div class="card__details">
+                    <h4 class="details__name">Aspirina</h4>
+                    <span class="details__price">$399</span>
+                    <p class="details__product">
+                        Caja de aspirinas de 8 pastillas
+                    </p>
+                </div>
+                <div class="card__controls">
+                    <label for="check" class="card__check">
+                        <input type="checkbox" id="check" name="check"  class="check__button">
+                        <span class="check__text">Elegir</span>
+                    </label>
+
+                    <label for="quantity" class="card__quantity">
+                        <span class="quantity__text">Cantidad</span>
+                        <input type="number" id="quantity" name="quantity"  class="quantity__input">
+                    </label>
+                </div>
+            </article>
+
             <article class="product__card">
                 <picture class="card__image-container">
                     <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
@@ -176,14 +200,15 @@
                 </div>
             </article>
         </main>
-    
-        <section class="product__buy">
+        
+        <section class="product__buy" id="buyBar">
             <button class="button__buy">
                 Finalizar compra
             </button>
         </section>
-
     </div>
+    
+
     <div class="overlay"></div>
     <script src="../js/dashboard.js"></script>
 
