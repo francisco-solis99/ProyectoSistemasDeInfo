@@ -288,7 +288,7 @@ input[type="checkbox"]:checked::after{
     /* background-color: lightcoral; */
 }
 
-.quantity__active{
+.card__quantity.is-active{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -634,6 +634,7 @@ input[type="checkbox"]:checked::after{
     
     .quantity__input{
         font-size: 1.4rem;
+        width: 40px;
     }
     
 

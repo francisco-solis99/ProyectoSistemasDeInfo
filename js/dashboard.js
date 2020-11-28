@@ -10,18 +10,28 @@ const header = document.querySelector('#header');
 
 
 // Control products DOM elements
-const checkControl = document.querySelector('#check');
-const quiantityCntrol = document.querySelector('#quantity');
+const checkControl = document.querySelector("input[type=checkbox]");
+const quantityControl = document.querySelector('input[type=number]');
+const quantityDiv = document.querySelector('.card__quantity');
 
 
 // console.log(burgerMenu);
 // console.log(closeMenu);
 // console.log(checkControl);
-// console.log(quiantityCntrol);
+// console.log(quantityDiv);
 // console.log(overlay);
 
 burgerMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
+
+checkControl.addEventListener('change', function(){
+    if(this.checked){
+        quantityDiv.classList.add('is-active');
+    } else{
+        console.log('Item no select')
+        quantityDiv.classList.remove('is-active');
+    }
+});
 
 
 // Functions to menu
