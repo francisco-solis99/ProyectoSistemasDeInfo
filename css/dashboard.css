@@ -596,17 +596,46 @@ input[type="checkbox"]:checked::after{
         top: -30vh;
         left: 3vh;
         background-color: var(--red);
+        transition: all 400ms ease-in-out;
     }
     
     .button__buy:hover{
         background-color: var(--red);
-        transform: scale(1.1);
+        transform: scale(1.05);
         color: white;
         border: 1px solid white;
 
     }
     
+    /* Styles to product card */
+    .details__name{
+        font-size: 1.8rem;
+    
+    }
+    
+    .details__price{
+        font-size: 1.7rem;
+        color: var(--darkBlue);
+        font-weight: 700;
+    }
+    
+    .details__product{
+        font-size: 1.2rem;
+        color: var(--logoGray);
+        font-weight: 400;
+    }
+    .check__text{
+        font-size: 1.4rem;
+    }
 
+    .quantity__text{
+        font-size: 1.4rem;
+    }
+    
+    .quantity__input{
+        font-size: 1.4rem;
+    }
+    
 
 
     /* Barra de busqueda */
