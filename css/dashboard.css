@@ -9,7 +9,7 @@
     --darkBlue: hsl(249, 10%, 26%);
     --graishBlue: hsl(246, 25%, 77%);
     --grayInputs: #C4C8DB;
-    --background: #F9FBFB;
+    --background: #FAFAFA;
 }
 
 *{
@@ -59,6 +59,13 @@ body{
 .burger__icon{
     color: var(--darkBlue);
     cursor: pointer;
+    display: block; 
+    fill: none; 
+    height: 16px; 
+    width: 16px; 
+    stroke: currentcolor; 
+    stroke-width: 3;
+     overflow: visible;
 }
 
 .burger__container{
@@ -84,7 +91,7 @@ body{
     width: 98%;
     line-height: inherit;
     padding: 10px;
-    padding-left: 2em;
+    padding-left: 10%;
     border: none;
 }
 
@@ -350,7 +357,7 @@ input[type="checkbox"]:checked::after{
     bottom: 0;
     left: -100vw;
     right: 50%;
-    padding-top: 3em;
+    padding-top: 4em;
     display: none;
     transition: all ease-in-out 500ms;
 }
@@ -421,16 +428,21 @@ input[type="checkbox"]:checked::after{
 }
 
 
-.menu__item:first-child{
+.menu__item{
     width: 50%;
     margin: 0;
     background-color: transparent;
 }
 
-.menu__item{
+.menu__itemT{
     display: flex;
     margin: -3px 0;
+    transition: 500ms all ease-in;
 }
+
+/* .menu__itemT:hover .item__text{
+    
+} */
 
 .item__text{
     color: white;
@@ -439,14 +451,17 @@ input[type="checkbox"]:checked::after{
     margin-left: 10px;
 }
 
-.menu__item:last-child{
+.menu__itemT:last-child{
     cursor: pointer;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 300ms;
 }
 
-.menu__item:last-child:hover{
-    text-decoration: underline;
+.menu__itemT:last-child:hover{
+    cursor: pointer;
+    border-left: 3px solid var(--red);
+    background-color: #38CC8C;
 }
+
 
 .overlay{
     display: none;
@@ -464,4 +479,138 @@ input[type="checkbox"]:checked::after{
     width: 50vw;
     height: 100vh;
     transition: all ease-in 300ms;
+}
+
+@media screen and (min-width: 468px){
+    .search__input{
+        padding-left: 8%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 15% 85%;   
+        grid-template-rows: 50px auto;
+        grid-template-areas: "menuu buscador"
+                             "menuu productos";
+         
+    }
+
+    /* Styles to products section */
+
+    .products{
+        grid-area: productos;
+        width: 100%;
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding: 5%;
+        gap: 25px;
+        margin-bottom: 10px;
+
+        /* background-color: lightcoral; */
+    }
+
+    /* Styles to header */
+    .header{
+        grid-area: buscador;
+        width: auto;
+        line-height: 30px;
+        padding: 0;
+        padding-right: 5%;
+        position: sticky;
+        box-shadow: 1px 0px 4px 1px rgba(41, 41, 41, 0.75);
+    }
+
+    .burger__container{
+        display: none;
+    }
+
+    .search__input{
+        background-color: transparent;
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+
+
+    /* Styles to menu */
+
+    .menu{
+        grid-area: menuu;
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu__close-icon{
+        display: none;
+    }
+
+  
+    .menu__list{
+        margin-top: 2em;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: fixed;
+    }
+    
+    .menu__item{
+        width: 80%;
+        align-self: center;
+        margin-bottom: 15px;
+    }
+    
+    .menu__itemT{
+        display: flex;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+    
+    .item__text{
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    
+    .menu__itemT:last-child{
+        cursor: pointer;
+        transition: all ease-in-out 200ms;
+    }
+    
+    /* Styles to buy button */
+
+    .product__buy{
+        background-color: transparent;
+        box-shadow: none;
+    } 
+    
+    .button__buy{
+        position: absolute;
+        top: -30vh;
+        left: 3vh;
+        background-color: var(--red);
+    }
+    
+    .button__buy:hover{
+        background-color: var(--red);
+        transform: scale(1.1);
+        color: white;
+        border: 1px solid white;
+
+    }
+    
+
+
+
+    /* Barra de busqueda */
+    .search__input{
+        padding-left: 5%;
+    }
 }
