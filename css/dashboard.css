@@ -419,7 +419,9 @@ input[type="checkbox"]:checked::after{
     padding: 5px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -566,11 +568,8 @@ input[type="checkbox"]:checked::after{
   
     .menu__list{
         margin-top: 2em;
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        position: fixed;
+        position: sticky;
+        top: 20%;
     }
     
     .menu__item{
@@ -604,7 +603,7 @@ input[type="checkbox"]:checked::after{
     .button__buy{
         position: absolute;
         top: -30vh;
-        left: 2.5vw;
+        left: 2.3vw;
         background-color: var(--red);
         transition: all 400ms ease-in-out;
     }
