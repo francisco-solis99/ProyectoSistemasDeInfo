@@ -38,6 +38,13 @@ function hideMenu(){
 
 }
 
+// Hide menu with target 
+window.addEventListener('click', function(e){
+    if(e.target === overlay){
+        hideMenu();
+    }
+});
+
 
 // Elementos del DOM para control de los checkboxes
 const checkboxes = document.getElementsByName('check');

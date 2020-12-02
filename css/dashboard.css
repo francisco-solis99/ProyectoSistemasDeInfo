@@ -362,11 +362,12 @@ input[type="checkbox"]:checked::after{
     left: -100vw;
     right: 40%;
     padding-top: 4em;
-    display: none;
+    transform: scale(0);
     transition: all ease-in-out 500ms;
 }
 
 .menu.is-active{
+    transform: scale(1);
     display: flex;
     flex-direction: column;
     left: 0;
@@ -472,20 +473,20 @@ input[type="checkbox"]:checked::after{
 
 
 .overlay{
-    display: none;
-    transition: all ease-in 300ms;
-}
-
-.overlay.is-active{
     content: "";
     position: fixed;
     z-index: 1;
     display: block;
     background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
+    top: -100vh;
     left: 50%;
     width: 50vw;
     height: 100vh;
+    transition: all ease-in 300ms;
+}
+
+.overlay.is-active{
+    top: 0;
     transition: all ease-in 300ms;
 }
 
@@ -555,6 +556,7 @@ input[type="checkbox"]:checked::after{
         align-items: center;
         min-height: 100vh;
         background-image: url(../images/bg-mobile.svg);
+        transform: scale(1);
     }
     
     .menu__close-icon{
