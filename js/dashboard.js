@@ -10,28 +10,13 @@ const header = document.querySelector('#header');
 
 
 // Control products DOM elements
-const checkControl = document.querySelector("input[type=checkbox]");
-const quantityControl = document.querySelector('input[type=number]');
-const quantityDiv = document.querySelector('.card__quantity');
+// const checkControl = document.querySelector("input[type=checkbox]");
+// const quantityControl = document.querySelector('input[type=number]');
 
 
-// console.log(burgerMenu);
-// console.log(closeMenu);
-// console.log(checkControl);
-// console.log(quantityDiv);
-// console.log(overlay);
 
 burgerMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
-
-checkControl.addEventListener('change', function(){
-    if(this.checked){
-        quantityDiv.classList.add('is-active');
-    } else{
-        console.log('Item no select')
-        quantityDiv.classList.remove('is-active');
-    }
-});
 
 
 // Functions to menu
@@ -53,3 +38,33 @@ function hideMenu(){
 
 }
 
+// Hide menu with target 
+window.addEventListener('click', function(e){
+    if(e.target === overlay){
+        hideMenu();
+    }
+});
+
+
+// Elementos del DOM para control de los checkboxes
+const checkboxes = document.getElementsByName('check');
+console.log(checkboxes);
+const quantityDiv = document.getElementsByClassName('card__quantity');
+console.log(quantityDiv);
+
+let selectProducts = [];
+
+checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        selectProducts = Array.from(checkboxes).filter(i => i.checked).map(i => i.value)
+       
+        for(let i = 0; i < checkboxes.length; i+=1){
+            if(checkboxes[i].checked){
+                quantityDiv[i].classList.add('is-active');
+            } else{
+                quantityDiv[i].classList.remove('is-active');
+            }
+        }
+        console.log(selectProducts);
+    })
+});

@@ -198,6 +198,10 @@ body{
 
 .card__image{
     width: 100%;
+    height: 100%;
+    min-height: 234px;
+    max-height: 234px;
+    object-fit: contain;
 }
 
 .details__name{
@@ -356,13 +360,14 @@ input[type="checkbox"]:checked::after{
     top: 0;
     bottom: 0;
     left: -100vw;
-    right: 50%;
+    right: 40%;
     padding-top: 4em;
-    display: none;
+    transform: scale(0);
     transition: all ease-in-out 500ms;
 }
 
 .menu.is-active{
+    transform: scale(1);
     display: flex;
     flex-direction: column;
     left: 0;
@@ -414,7 +419,9 @@ input[type="checkbox"]:checked::after{
     padding: 5px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -431,13 +438,17 @@ input[type="checkbox"]:checked::after{
 .menu__item{
     width: 50%;
     margin: 0;
-    background-color: transparent;
+    align-self: center;
+    margin-bottom: 15px;
 }
 
 .menu__itemT{
     display: flex;
     margin: -3px 0;
     transition: 500ms all ease-in;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    align-self: center;
 }
 
 /* .menu__itemT:hover .item__text{
@@ -446,7 +457,7 @@ input[type="checkbox"]:checked::after{
 
 .item__text{
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-left: 10px;
 }
@@ -464,20 +475,20 @@ input[type="checkbox"]:checked::after{
 
 
 .overlay{
-    display: none;
-    transition: all ease-in 300ms;
-}
-
-.overlay.is-active{
     content: "";
     position: fixed;
     z-index: 1;
     display: block;
     background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
+    top: -100vh;
     left: 50%;
     width: 50vw;
     height: 100vh;
+    transition: all ease-in 300ms;
+}
+
+.overlay.is-active{
+    top: 0;
     transition: all ease-in 300ms;
 }
 
@@ -545,6 +556,9 @@ input[type="checkbox"]:checked::after{
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-height: 100vh;
+        background-image: url(../images/bg-mobile.svg);
+        transform: scale(1);
     }
     
     .menu__close-icon{
@@ -554,17 +568,12 @@ input[type="checkbox"]:checked::after{
   
     .menu__list{
         margin-top: 2em;
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        position: fixed;
+        position: sticky;
+        top: 20%;
     }
     
     .menu__item{
         width: 80%;
-        align-self: center;
-        margin-bottom: 15px;
     }
     
     .menu__itemT{
@@ -594,7 +603,7 @@ input[type="checkbox"]:checked::after{
     .button__buy{
         position: absolute;
         top: -30vh;
-        left: 3vh;
+        left: 2.3vw;
         background-color: var(--red);
         transition: all 400ms ease-in-out;
     }
