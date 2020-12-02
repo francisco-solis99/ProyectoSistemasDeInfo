@@ -360,7 +360,7 @@ input[type="checkbox"]:checked::after{
     top: 0;
     bottom: 0;
     left: -100vw;
-    right: 50%;
+    right: 40%;
     padding-top: 4em;
     display: none;
     transition: all ease-in-out 500ms;
@@ -435,13 +435,17 @@ input[type="checkbox"]:checked::after{
 .menu__item{
     width: 50%;
     margin: 0;
-    background-color: transparent;
+    align-self: center;
+    margin-bottom: 15px;
 }
 
 .menu__itemT{
     display: flex;
     margin: -3px 0;
     transition: 500ms all ease-in;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    align-self: center;
 }
 
 /* .menu__itemT:hover .item__text{
@@ -450,7 +454,7 @@ input[type="checkbox"]:checked::after{
 
 .item__text{
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-left: 10px;
 }
@@ -550,6 +554,7 @@ input[type="checkbox"]:checked::after{
         flex-direction: column;
         align-items: center;
         min-height: 100vh;
+        background-image: url(../images/bg-mobile.svg);
     }
     
     .menu__close-icon{
@@ -568,8 +573,6 @@ input[type="checkbox"]:checked::after{
     
     .menu__item{
         width: 80%;
-        align-self: center;
-        margin-bottom: 15px;
     }
     
     .menu__itemT{
