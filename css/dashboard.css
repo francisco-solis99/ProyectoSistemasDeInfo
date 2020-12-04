@@ -663,7 +663,7 @@ body{
     .button__buy{
         position: absolute;
         top: -30vh;
-        left: 2.3vw;
+        left: 4%;
         background-color: var(--red);
         transition: all 400ms ease-in-out;
     }
