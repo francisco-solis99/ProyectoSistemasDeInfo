@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Productos de venta</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/carrito.css">
 </head>
 <body>
     <div class="wrapper">
@@ -19,7 +17,7 @@
             <ul class="menu__list">
                 <li class="menu__item">
                     <picture class="menu__image-container">
-                        <img src="./images/avatar.svg" alt="Avatar image" class="menu__image">
+                        <img src="../dashboard/images/avatar.svg" alt="Avatar image" class="menu__image">
                     </picture>
                 </li>
                 <li class="menu__itemT">
@@ -77,8 +75,6 @@
               </div>
         </header>
 
-       
-    
         <main class="products" id="products">
             <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
@@ -92,20 +88,21 @@
                     </div>
                     <!-- Nombre del producto -->
                     <div class="details__name-wrapper">
-                        <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
                     </div>
                     
                     <!-- Stock -->
                     <div class="details__info1">
                         <label for="" class="details__stock-wrapper">
                             <span class="stock__text">Stock:</span>
-                            <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock">
+                            <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
                         </label>
 
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
 
                         <!-- Receta -->
                         <p class="details__recipe" id="recipe">
-                            <!-- El span de si o no -->
                             <span class="recipe__if" id="recipeIf">No</span> necesita receta
                         </p>
 
@@ -114,8 +111,9 @@
                     <!-- Precio -->
                     <div class="details__nums">
                         <label for="" class="detail__price-wrapper">
-                            <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
                         </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
                         
                         <!-- Cantidad -->
                         <label for="card-unit" class="card__quantity">
@@ -125,6 +123,7 @@
                             max="6">
                         </label>
                     </div>
+
                     <!-- Boton de elegir o agregar -->
                     <div class="card__button">
                         <input name="submit" type="submit" value="Agregar" class="card__submit">
@@ -132,17 +131,8 @@
                 </div>
             </form>
         </main>
-        
-        <section class="product__buy" id="buyBar">
-            <button class="button__buy">
-                Ir a carrito
-            </button>
-        </section>
     </div>
-    
 
     <div class="overlay"></div>
-    <script src="../js/dashboard.js"></script>
-
 </body>
 </html>
