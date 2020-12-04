@@ -80,127 +80,293 @@
        
     
         <main class="products" id="products">
-            <article class="product__card">
+            <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
                     <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
                 </picture>
+                <!-- Empiezan los campos de la card-->
                 <div class="card__details">
-                    <h4 class="details__name">Aspirina</h4>
-                    <span class="details__price">$40</span>
-                    <p class="details__product">
-                        Caja de aspirinas de 8 pastillas
-                    </p>
-                </div>
-                <div class="card__controls">
-                    <label for="check" class="card__check">
-                        <input type="checkbox" id="check" name="check" class="check__button" value="aspirina">
-                        <span class="check__text">Elegir</span>
-                    </label>
+                    <!-- El oculto -->
+                    <div>
+						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
+                    </div>
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
+                    </div>
+                    
+                    <!-- Stock -->
+                    <div class="details__stock-wrapper">
+                        <span class="stock__text">En stock:</span>
+                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
 
-                    <label for="quantity" class="card__quantity">
-                        <span class="quantity__text">Cantidad</span>
-                        <input type="number" id="quantity" name="quantity"  class="quantity__input"
-                        min="1"
-                        max="6">
-                    </label>
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
+
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <label for="" class="detail__price-wrapper">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
+                        </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
+                        
+                        <!-- Cantidad -->
+                        <label for="card-unit" class="card__quantity">
+                            <span class="quantity__text">Cantidad:</span>
+                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
+                            min="1"
+                            max="6">
+                        </label>
+                    </div>
+
+                    <!-- Boton de elegir o agregar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                    </div>
                 </div>
-            </article>
-    
-            <article class="product__card">
+            </form>
+
+            <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_752766-MLM42310003268_062020-O.webp" alt="Imagen del paracetamol" class="card__image">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
                 </picture>
+                <!-- Empiezan los campos de la card-->
                 <div class="card__details">
-                    <h4 class="details__name">Paracetamol</h4>
-                    <span class="details__price">$28</span>
-                    <p class="details__product">
-                        Caja de paracetamol de 10 pastillas
-                    </p>
-                </div>
-                <div class="card__controls">
-                    <label for="check" class="card__check">
-                        <input type="checkbox" id="check" name="check"  class="check__button" value="Paracetamol">
-                        <span class="check__text">Elegir</span>
-                    </label>
+                    <!-- El oculto -->
+                    <div>
+						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
+                    </div>
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
+                    </div>
+                    
+                    <!-- Stock -->
+                    <div class="details__stock-wrapper">
+                        <span class="stock__text">En stock:</span>
+                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
 
-                    <label for="quantity" class="card__quantity">
-                        <span class="quantity__text">Cantidad</span>
-                        <input type="number" id="quantity" name="quantity"  class="quantity__input">
-                    </label>
-                </div>
-            </article>
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
 
-            <article class="product__card">
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <label for="" class="detail__price-wrapper">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
+                        </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
+                        
+                        <!-- Cantidad -->
+                        <label for="card-unit" class="card__quantity">
+                            <span class="quantity__text">Cantidad:</span>
+                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
+                            min="1"
+                            max="6">
+                        </label>
+                    </div>
+
+                    <!-- Boton de elegir o agregar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_752766-MLM42310003268_062020-O.webp" alt="Imagen del paracetamol" class="card__image">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
                 </picture>
+                <!-- Empiezan los campos de la card-->
                 <div class="card__details">
-                    <h4 class="details__name">Paracetamol</h4>
-                    <span class="details__price">$28</span>
-                    <p class="details__product">
-                        Caja de paracetamol de 10 pastillas
-                    </p>
-                </div>
-                <div class="card__controls">
-                    <label for="check" class="card__check">
-                        <input type="checkbox" id="check" name="check"  class="check__button" value="Paracetamol">
-                        <span class="check__text">Elegir</span>
-                    </label>
+                    <!-- El oculto -->
+                    <div>
+						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
+                    </div>
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
+                    </div>
+                    
+                    <!-- Stock -->
+                    <div class="details__stock-wrapper">
+                        <span class="stock__text">En stock:</span>
+                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
 
-                    <label for="quantity" class="card__quantity">
-                        <span class="quantity__text">Cantidad</span>
-                        <input type="number" id="quantity" name="quantity"  class="quantity__input">
-                    </label>
-                </div>
-            </article>
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
 
-            <article class="product__card">
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <label for="" class="detail__price-wrapper">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
+                        </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
+                        
+                        <!-- Cantidad -->
+                        <label for="card-unit" class="card__quantity">
+                            <span class="quantity__text">Cantidad:</span>
+                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
+                            min="1"
+                            max="6">
+                        </label>
+                    </div>
+
+                    <!-- Boton de elegir o agregar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_752766-MLM42310003268_062020-O.webp" alt="Imagen del paracetamol" class="card__image">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
                 </picture>
+                <!-- Empiezan los campos de la card-->
                 <div class="card__details">
-                    <h4 class="details__name">Paracetamol</h4>
-                    <span class="details__price">$28</span>
-                    <p class="details__product">
-                        Caja de paracetamol de 10 pastillas
-                    </p>
-                </div>
-                <div class="card__controls">
-                    <label for="check" class="card__check">
-                        <input type="checkbox" id="check" name="check"  class="check__button" value="Paracetamol">
-                        <span class="check__text">Elegir</span>
-                    </label>
+                    <!-- El oculto -->
+                    <div>
+						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
+                    </div>
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
+                    </div>
+                    
+                    <!-- Stock -->
+                    <div class="details__stock-wrapper">
+                        <span class="stock__text">En stock:</span>
+                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
 
-                    <label for="quantity" class="card__quantity">
-                        <span class="quantity__text">Cantidad</span>
-                        <input type="number" id="quantity" name="quantity"  class="quantity__input">
-                    </label>
-                </div>
-            </article>
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
 
-            <article class="product__card">
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <label for="" class="detail__price-wrapper">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
+                        </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
+                        
+                        <!-- Cantidad -->
+                        <label for="card-unit" class="card__quantity">
+                            <span class="quantity__text">Cantidad:</span>
+                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
+                            min="1"
+                            max="6">
+                        </label>
+                    </div>
+
+                    <!-- Boton de elegir o agregar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_752766-MLM42310003268_062020-O.webp" alt="Imagen del paracetamol" class="card__image">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
                 </picture>
+                <!-- Empiezan los campos de la card-->
                 <div class="card__details">
-                    <h4 class="details__name">Paracetamol</h4>
-                    <span class="details__price">$28</span>
-                    <p class="details__product">
-                        Caja de paracetamol de 10 pastillas
-                    </p>
-                </div>
-                <div class="card__controls">
-                    <label for="check" class="card__check">
-                        <input type="checkbox" id="check" name="check"  class="check__button" value="Paracetamol">
-                        <span class="check__text">Elegir</span>
-                    </label>
+                    <!-- El oculto -->
+                    <div>
+						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
+                    </div>
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
+                    </div>
+                    
+                    <!-- Stock -->
+                    <div class="details__stock-wrapper">
+                        <span class="stock__text">En stock:</span>
+                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
 
-                    <label for="quantity" class="card__quantity">
-                        <span class="quantity__text">Cantidad</span>
-                        <input type="number" id="quantity" name="quantity"  class="quantity__input">
-                    </label>
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
+
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <label for="" class="detail__price-wrapper">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
+                        </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
+                        
+                        <!-- Cantidad -->
+                        <label for="card-unit" class="card__quantity">
+                            <span class="quantity__text">Cantidad:</span>
+                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
+                            min="1"
+                            max="6">
+                        </label>
+                    </div>
+
+                    <!-- Boton de elegir o agregar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                    </div>
                 </div>
-            </article>
+            </form>
+
+            <form class="product__card" method="POST" action="">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <!-- Empiezan los campos de la card-->
+                <div class="card__details">
+                    <!-- El oculto -->
+                    <div>
+						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
+                    </div>
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
+                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
+                    </div>
+                    
+                    <!-- Stock -->
+                    <div class="details__stock-wrapper">
+                        <span class="stock__text">En stock:</span>
+                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
+
+                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
+
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <label for="" class="detail__price-wrapper">
+                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
+                        </label>
+                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
+                        
+                        <!-- Cantidad -->
+                        <label for="card-unit" class="card__quantity">
+                            <span class="quantity__text">Cantidad:</span>
+                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
+                            min="1"
+                            max="6">
+                        </label>
+                    </div>
+
+                    <!-- Boton de elegir o agregar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                    </div>
+                </div>
+            </form>
         </main>
         
         <section class="product__buy" id="buyBar">
