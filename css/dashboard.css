@@ -209,7 +209,7 @@ body{
 /* Detalles de la card styles */
 
 .card__details{
-    padding: 0.5em;
+    padding: 0;
 }
 
 .details__name{
@@ -223,20 +223,56 @@ body{
     margin-bottom: 20px;
 }
 
+.details__info1{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   /* background-color: grey; */
+   margin-bottom: 0.5em;
+}
+
+
+
+.details__stock-wrapper{
+    align-self: center;
+}
+
 .stock__text{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .details__stock{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--darkBlue);
     font-weight: 500;
     border: none;
-    width: 15%;
-    background-color: transparent;
-    margin-bottom: 10px;
+    width: 30px;
+    margin-bottom: 0;
     outline: none;
 }
+
+.details__recipe{
+    font-size: 0.8rem;
+    padding: 0 2px;
+    background-color: #498b49;
+    color: white;
+    border-radius: 2px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.receipe__if{
+    margin-right: 1px;
+}
+
+.details__stock::-webkit-inner-spin-button, 
+.details__stock::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.details__stock { -moz-appearance:textfield; }
+
 
 .details__nums{
     display: flex;
@@ -267,7 +303,7 @@ body{
 
 .card__quantity{
     display: flex;
-    /* background-color: salmon; */
+    align-items: center;
 }
 
 .quantity__text{
@@ -282,6 +318,7 @@ body{
     color: var(--darkBlue);
     border: 1px solid var(--graishBlue);
     border-radius: 3px;
+    padding: 3px;
 }
 
 /* Styles to check button */
@@ -494,6 +531,30 @@ body{
     .search__input{
         padding-left: 8%;
     }
+
+    .details__info1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+     }
+
+     .stock__text{
+         font-size: 1.2rem;
+     }
+     
+     .details__stock{
+         font-size: 1.2rem;         
+         width: 40px;
+     }
+     
+     .details__recipe{
+         font-size: 1rem;
+         padding: 0 2px;
+         justify-self: end;
+     }
+     
+     .receipe__if{
+         margin-right: 1px;
+     }
 }
 
 @media screen and (min-width: 1024px){
@@ -619,16 +680,18 @@ body{
         font-size: 1.8rem;
         border: none;
     }
-
-    .stock__text{
-        font-size: 1.5rem;
-    }
-
-    .details__stock{
-        font-size: 1.5rem;
-        width: 15%;
-        font-weight: 600;
-    }
+     .stock__text{
+         font-size: 1.3rem;
+     }
+     
+     .details__stock{
+         font-size: 1.3rem;
+     }
+     
+     .details__recipe{
+         font-size: 1rem;
+         padding: 2px 3px;
+     }
     
     .details__price{
         font-size: 1.7rem;
@@ -639,21 +702,18 @@ body{
         color: var(--logoGray);
         font-weight: 400;
     }
-    .check__text{
-        font-size: 1.4rem;
-    }
+
 
     .quantity__text{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        margin-right: 5px;
     }
     
     .quantity__input{
         font-size: 1.4rem;
-        width: 40px;
+        width: 80px;
     }
     
-
-
     /* Barra de busqueda */
     .search__input{
         padding-left: 5%;

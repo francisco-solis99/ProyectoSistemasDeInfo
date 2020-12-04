@@ -9,12 +9,6 @@ const buyBar = document.querySelector('#buyBar');
 const header = document.querySelector('#header');
 
 
-// Control products DOM elements
-// const checkControl = document.querySelector("input[type=checkbox]");
-// const quantityControl = document.querySelector('input[type=number]');
-
-
-
 burgerMenu.addEventListener('click', showMenu);
 closeMenu.addEventListener('click', hideMenu);
 
@@ -47,24 +41,36 @@ window.addEventListener('click', function(e){
 
 
 // Elementos del DOM para control de los checkboxes
-const checkboxes = document.getElementsByName('check');
-console.log(checkboxes);
-const quantityDiv = document.getElementsByClassName('card__quantity');
-console.log(quantityDiv);
+// const checkboxes = document.getElementsByName('check');
+// console.log(checkboxes);
+// const quantityDiv = document.getElementsByClassName('card__quantity');
+// console.log(quantityDiv);
 
-let selectProducts = [];
+// let selectProducts = [];
 
-checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-        selectProducts = Array.from(checkboxes).filter(i => i.checked).map(i => i.value)
+// checkboxes.forEach(function(checkbox) {
+//     checkbox.addEventListener('change', function() {
+//         selectProducts = Array.from(checkboxes).filter(i => i.checked).map(i => i.value)
        
-        for(let i = 0; i < checkboxes.length; i+=1){
-            if(checkboxes[i].checked){
-                quantityDiv[i].classList.add('is-active');
-            } else{
-                quantityDiv[i].classList.remove('is-active');
-            }
-        }
-        console.log(selectProducts);
-    })
-});
+//         for(let i = 0; i < checkboxes.length; i+=1){
+//             if(checkboxes[i].checked){
+//                 quantityDiv[i].classList.add('is-active');
+//             } else{
+//                 quantityDiv[i].classList.remove('is-active');
+//             }
+//         }
+//         console.log(selectProducts);
+//     })
+// });
+
+// Indicador de color segun si requiere receta o no
+const recipe = document.querySelector('#recipe');
+let recipeIf = document.querySelector('#recipeIf');
+
+if(recipeIf.textContent === 'Si'){
+    recipe.style.backgroundColor = '#d35656';
+}
+else{
+    recipe.style.backgroundColor = '#498b49';
+}
+

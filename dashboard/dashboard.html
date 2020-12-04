@@ -97,11 +97,17 @@
                     </div>
                     
                     <!-- Stock -->
-                    <div class="details__stock-wrapper">
-                        <span class="stock__text">En stock:</span>
-                        <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
+                    <div class="details__info1">
+                        <label for="" class="details__stock-wrapper">
+                            <span class="stock__text">Stock:</span>
+                            <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
+                        </label>
 
                         <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
+
+                        <p class="details__recipe" id="recipe">
+                            <span class="recipe__if" id="recipeIf">No</span> necesita receta
+                        </p>
 
                     </div>
                     
