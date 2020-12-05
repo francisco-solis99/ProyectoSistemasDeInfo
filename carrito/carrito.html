@@ -47,16 +47,7 @@
                     </g>
                 </svg>
             </picture>
-            <div class="search__bar-container">
-                <label for="search" class="search__label">
-                    <svg class="search__icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:4;overflow:visible" aria-hidden="true" role="presentation" focusable="false">
-                        <g fill="none">
-                            <path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
-                        </g>
-                    </svg>
-                    <input type="text" name="search" placeholder="Search" class="search__input">
-                </label>
-            </div>
+
             <div class="hero__logo">
                 <h1 class="logo__text">
                   <div class="logo__bandita">
@@ -72,9 +63,13 @@
                   </div>
                   <span class="logo__rest-text">enial</span>
                 </h1>
-              </div>
+            </div>
+            <h2 class="products__tittle">
+                Productos en el carrito
+            </h2>
         </header>
 
+      
         <main class="products" id="products">
             <form class="product__card" method="POST" action="">
                 <picture class="card__image-container">
@@ -82,57 +77,188 @@
                 </picture>
                 <!-- Empiezan los campos de la card-->
                 <div class="card__details">
-                    <!-- El oculto -->
-                    <div>
-						<input name="cart-id" type="hidden" value="<?php echo $itr[0]; ?>">
-                    </div>
                     <!-- Nombre del producto -->
                     <div class="details__name-wrapper">
-                        <input name="cart-name" type="text" value="Aspirina" readonly required class="details__name">
-                        <!-- <input name="cart-name" type="text" value="<?php echo $itr[1]; # Nombre del producto ?>" readonly required class="details__name"> -->
-                    </div>
-                    
-                    <!-- Stock -->
-                    <div class="details__info1">
-                        <label for="" class="details__stock-wrapper">
-                            <span class="stock__text">Stock:</span>
-                            <input name="cart-stock" type="number" value="8" readonly required class="details__stock">
-                        </label>
-
-                        <!-- <input name="cart-stock" type="number" value="<?php echo $itr[3]; # Precio del producto ?>" readonly required class="details__stock"> -->
-
-                        <!-- Receta -->
-                        <p class="details__recipe" id="recipe">
-                            <span class="recipe__if" id="recipeIf">No</span> necesita receta
-                        </p>
-
+                        <h4 class="details__name">Aspirina</h4>
                     </div>
                     
                     <!-- Precio -->
                     <div class="details__nums">
-                        <label for="" class="detail__price-wrapper">
-                            <input name="cart-cost" type="number" value="7" readonly required class="details__price">
-                        </label>
-                        <!-- <input name="cart-cost" type="number" value="<?php echo $itr[2]; # Precio del producto ?>" readonly required class="details__price"> -->
-                        
-                        <!-- Cantidad -->
-                        <label for="card-unit" class="card__quantity">
-                            <span class="quantity__text">Cantidad:</span>
-                            <input type="number" id="card-unit" name="card-unit"  class="quantity__input"
-                            min="1"
-                            max="6">
-                        </label>
+                        <div class="details__price-wrapper">
+                            <p class="quantity-text">
+                                Cantidad:
+                                <span class="quantity__number">8</span>
+                            </p>
+                        </div>
+                        <div class="details__total-wrapper">
+                            <p class="total__text">
+                                Total:
+                                <span class="total__number">89</span>
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Boton de elegir o agregar -->
+                    <!-- Boton de eliminar -->
                     <div class="card__button">
-                        <input name="submit" type="submit" value="Agregar" class="card__submit">
+                        <input name="submit" type="submit" value="Eliminar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <!-- Empiezan los campos de la card-->
+                <div class="card__details">
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <h4 class="details__name">Aspirina</h4>
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <div class="details__price-wrapper">
+                            <p class="quantity-text">
+                                Cantidad:
+                                <span class="quantity__number">8</span>
+                            </p>
+                        </div>
+                        <div class="details__total-wrapper">
+                            <p class="total__text">
+                                Total:
+                                <span class="total__number">89</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Boton de eliminar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Eliminar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <!-- Empiezan los campos de la card-->
+                <div class="card__details">
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <h4 class="details__name">Aspirina</h4>
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <div class="details__price-wrapper">
+                            <p class="quantity-text">
+                                Cantidad:
+                                <span class="quantity__number">8</span>
+                            </p>
+                        </div>
+                        <div class="details__total-wrapper">
+                            <p class="total__text">
+                                Total:
+                                <span class="total__number">89</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Boton de eliminar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Eliminar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <!-- Empiezan los campos de la card-->
+                <div class="card__details">
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <h4 class="details__name">Aspirina</h4>
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <div class="details__price-wrapper">
+                            <p class="quantity-text">
+                                Cantidad:
+                                <span class="quantity__number">8</span>
+                            </p>
+                        </div>
+                        <div class="details__total-wrapper">
+                            <p class="total__text">
+                                Total:
+                                <span class="total__number">89</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Boton de eliminar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Eliminar" class="card__submit">
+                    </div>
+                </div>
+            </form>
+
+            <form class="product__card" method="POST" action="">
+                <picture class="card__image-container">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_841244-MLM42040516641_062020-O.webp" alt="Imagen de la Aspirina" class="card__image">
+                </picture>
+                <!-- Empiezan los campos de la card-->
+                <div class="card__details">
+                    <!-- Nombre del producto -->
+                    <div class="details__name-wrapper">
+                        <h4 class="details__name">Aspirina</h4>
+                    </div>
+                    
+                    <!-- Precio -->
+                    <div class="details__nums">
+                        <div class="details__price-wrapper">
+                            <p class="quantity-text">
+                                Cantidad:
+                                <span class="quantity__number">8</span>
+                            </p>
+                        </div>
+                        <div class="details__total-wrapper">
+                            <p class="total__text">
+                                Total:
+                                <span class="total__number">89</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Boton de eliminar -->
+                    <div class="card__button">
+                        <input name="submit" type="submit" value="Eliminar" class="card__submit">
                     </div>
                 </div>
             </form>
         </main>
-    </div>
 
+        <section class="product__buy" id="buyBar">
+            <div class="total__venta-wrapper">
+                <p class="total__text">
+                    Total de venta:
+                    <span class="total__venta">544</span>
+                </p>
+            </div>
+            <button class="button__control">
+                Finalizar venta
+            </button>
+
+            <button class="button__control button__control-red">
+                Cancelar venta
+            </button>
+        </section>
+
+    </div>
     <div class="overlay"></div>
 </body>
 </html>
