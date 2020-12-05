@@ -40,29 +40,6 @@ window.addEventListener('click', function(e){
 });
 
 
-// Elementos del DOM para control de los checkboxes
-// const checkboxes = document.getElementsByName('check');
-// console.log(checkboxes);
-// const quantityDiv = document.getElementsByClassName('card__quantity');
-// console.log(quantityDiv);
-
-// let selectProducts = [];
-
-// checkboxes.forEach(function(checkbox) {
-//     checkbox.addEventListener('change', function() {
-//         selectProducts = Array.from(checkboxes).filter(i => i.checked).map(i => i.value)
-       
-//         for(let i = 0; i < checkboxes.length; i+=1){
-//             if(checkboxes[i].checked){
-//                 quantityDiv[i].classList.add('is-active');
-//             } else{
-//                 quantityDiv[i].classList.remove('is-active');
-//             }
-//         }
-//         console.log(selectProducts);
-//     })
-// });
-
 // Indicador de color segun si requiere receta o no
 const recipe = document.querySelector('#recipe');
 let recipeIf = document.querySelector('#recipeIf');
@@ -74,3 +51,17 @@ else{
     recipe.style.backgroundColor = '#498b49';
 }
 
+// Mantener el color una vez que es seleccioando
+const addButton = document.querySelector('#submitButton');
+console.log(addButton);
+
+addButton.addEventListener('click', keepColor);
+
+function keepColor(){
+    addButton.style.backgroundColor = '#498b49';
+    addButton.disabled = true;
+
+    if (addButton.disabled === true ){
+        addButton.value = 'Agregado'
+    }
+}
